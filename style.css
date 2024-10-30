@@ -43,6 +43,11 @@ body{
     z-index: 5;
 }
 
+
+.header:hover{
+    border-bottom: 1px solid var(--main-color);
+}
+
 .header ul{
     display: flex;
     list-style-type: none;
@@ -91,10 +96,12 @@ section{
 }
 
 .home{
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 15rem;
+    border-bottom: 1px solid var(--main-color);
 }
 
 .home-content{
@@ -405,7 +412,7 @@ span{
 .services{
     background: var(--bg-color);
     color: #000;
-    border: 1px solid #fff;
+
 }
 
 .services h2{
@@ -640,7 +647,7 @@ span{
     
     .home{
         flex-direction: column-reverse;
-        margin: 5rem 4rem;
+        margin: 8rem 4rem;
     }
      .home-content h3{
         font-size: 2.6rem;
@@ -659,6 +666,9 @@ span{
         width: 56vw;
      }
 
+     .home-content{
+        border-top: 2px solid var(--main-color);
+     }
      .services h2{
         margin-bottom: 3rem;
      }
@@ -666,4 +676,70 @@ span{
      .services-container{
         grid-template-columns: repeat(1, 1fr);
      }
+}
+
+.mobile-active{
+    position: absolute;
+    z-index: 99999;
+    width: 200px;
+    left: 0;
+    display: block;
+    margin-top: 70px;
+    top: 0;
+    height: 480px;
+    background-color: var(--bg-color);
+    border: 1px solid #fff;
+    border-radius: 0px 4px 4px 0px;
+    display: flex;
+    align-items: center;
+}
+
+.mobile-active .navbar-mobile{
+    width: 100%;
+
+}
+
+.mobile-active .navbar-mobile ul{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    list-style-type: none;
+}
+
+.mobile-active .navbar-mobile .active{
+    color: var(--main-color);
+}
+
+.mobile-active .navbar-mobile .active a{
+    color: var(--main-color);
+}
+
+.mobile-active .navbar-mobile i{
+    font-size: 25px;
+}
+
+.mobile-active .navbar-mobile div{
+    border-bottom: 1px solid #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 5px;
+}
+
+.mobile-active .navbar-mobile div:nth-of-type(5){
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.mobile-active .navbar-mobile a{
+    font-size: 18px;
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.mobile-desactive{
+    display: none;
+
 }
